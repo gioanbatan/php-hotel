@@ -43,7 +43,7 @@ $hotels = [
 
 
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -55,18 +55,32 @@ $hotels = [
 </head>
 
 <body>
-    <?php
-    for ($i = 0; $i < count($hotels); $i++) {
-        echo "<h2>Hotel {$i}</h2>";
-        echo "<div>";
-        foreach ($hotels[$i] as $key => $value) {
-            echo "<span>{$key}: {$value}</span>
-            <br>";
-        }
-        echo "</div>";
-    }
-    ?>
-
+    <table class="table table-dark">
+        <thead>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <?php
+                    foreach ($hotels[0] as $key => $value) {
+                        echo "<th>" . ucfirst(str_replace("_", " ", $key)) .
+                            "</th>";
+                    }
+                    ?>
+                </tr>
+            </thead>
+        <tbody>
+            <?php
+            for ($i = 0; $i < count($hotels); $i++) {
+                echo "<tr>";
+                echo "<td>" . $i + 1 . "</td>";
+                foreach ($hotels[$i] as $key => $value) {
+                    echo "<td>{$value}</td>";
+                }
+                echo "</tr>";
+            }
+            ?>
+        </tbody>
+    </table>
 </body>
 
 </html>
