@@ -1,0 +1,27 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.ms_content {
+    width: 100%;
+    min-height: 700px;
+    padding: 1rem;
+    background-color: cornsilk;
+    border-radius: 30px;
+}
+
+.ms_table {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+table {
+    background-color: #ffffff80;
+}
